@@ -1,0 +1,15 @@
+Escape Characters in Java
+
+-A char is a wrapper class for character
+-Character ch+new character ('a');
+boolean is Letter(char ch): defines the char value as a letter or a digit.
+-boolean is Whitespace (char ch) determines the char value is white space
+-boolean is Uppercase (char ch) determines the uppercase/lowercase form of the char value
+-toString (char ch) Returns a string object representing the specific character value.
+\t tab
+\b backspace
+\n newline
+\r carriage return
+\f formfeed
+\' single quote character
+\\ backslash character
