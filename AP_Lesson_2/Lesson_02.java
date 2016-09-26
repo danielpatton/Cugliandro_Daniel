@@ -6,7 +6,7 @@ public class Lesson_02
 		int n1 = 4;
 		int n2 = 12;
 		int total = n1 * n2;
-		String n = " Joseph ";
+		String n = " Daniel Cugliandro";
 		String a = " 4161 Street ";
 		String c = " San Diego ";
 		int z = 92130;
@@ -22,15 +22,15 @@ public class Lesson_02
 		
 		//Concatenation
 		System.out.println(" ");
-		System.out.println("Concatenation:");
-		System.out.println("Name:" + n);
-		System.out.println("Address:" + a);
-		System.out.println("City:" + c);
-		System.out.println("Zip:" + z);
+		System.out.println("Address:");
+		System.out.println(n);
+		System.out.println(a);
+		System.out.println(c + z);
+		
 		
 		//Complex Calculation
 		System.out.println();
 		System.out.println("Concatenation: ");
-		System.out.println("The surface area of your rectangle is" + surArea);
+		System.out.println("The surface area of your rectangle is " + surArea);
 	}
 }
