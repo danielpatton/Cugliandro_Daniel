@@ -8,7 +8,7 @@ public class Ex_03
 	public static void main(String[]args) 
 	{
 		Scanner kb = new Scanner(System.in);
-		System.out.println("What is the lenght of the side of your cube? ");
+		System.out.println("What is the length of the side of your cube? ");
 		side = kb.nextDouble();
 		calcSurf();
 		print();

@@ -7,7 +7,6 @@ public class Ex_01
 	
 	public static void main(String[]args)
 	{
-		Rectangle rect= new Rectangle();
 		Scanner kb = new Scanner(System.in);
 		System.out.println("What is your length? ");
 		l = kb.nextInt();
@@ -24,6 +23,6 @@ public class Ex_01
 	
 	public static void print()
 	{
-		System.out.println("With the length " + l + ", and the width " + w + ", your perimeter is: " + perimeter);
+		System.out.println("Your rectangle is  " + perimeter + " ft around.");
 	}
 }

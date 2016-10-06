@@ -27,6 +27,6 @@ public class Ex_02
 	
 	public static void print()
 	{
-		System.out.printf("The average of your first, second, and third value is %15.5f", avg);
+		System.out.printf("The average of " + num1 + "," + num2 + ", and " + num3 + " is %15.5f", avg);
 	}
 }
