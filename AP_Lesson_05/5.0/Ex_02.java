@@ -45,6 +45,7 @@ public class Ex_02
 		form.format(word3, number3);
 		form.format(word4, number4);
 		form.format("Subtotal: ", subtotal);
+		form.format("Tax:", tax);
 		form.format("Discount: ", disc);
 		form.format("Total: ", total);
 		
