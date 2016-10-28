@@ -22,6 +22,6 @@ public class Ex_03
 	}
 	public double calcCI(double r1, double p1, double n1, double t1)
 	{
-		return p1*(Math.pow(1 + r1/n1,(n1*t1)));
+		return (p1*(Math.pow((1 + (r1/n1)),(n1*t1))))/(12*t1);
 	}
 }

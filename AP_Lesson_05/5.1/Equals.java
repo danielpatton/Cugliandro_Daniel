@@ -7,6 +7,6 @@ public class Equals
 		System.out.println("Enter a word: ");
 		String word1 = kb.next();
 		String word2 = "word";
-		System.out.println(word1.equals(word2));
+		System.out.println(word1 == word2);
 	}
 }
