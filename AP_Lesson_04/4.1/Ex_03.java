@@ -17,7 +17,7 @@ public class Ex_03
 		System.out.println("What is the life of the loan? ");
 		double t = kb.nextDouble();
 		double CompInt = CI.calcCI(r,p,n,t);
-		System.out.printf("Your total monthly payment is \n%15.2f", CompInt);
+		System.out.printf("Your total  monthly payment is \n%15.2f", CompInt);
 		
 	}
 	public double calcCI(double r1, double p1, double n1, double t1)
