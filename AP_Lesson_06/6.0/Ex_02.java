@@ -7,9 +7,10 @@ public class Ex_02
 		System.out.println("Please enter your number: ");
 		int number = kb.nextInt();
 		int factorial = 1;
-		for(factorial > number; i+factorial)
+		for(int i = 1; i <= number; i++)
 		{
-			System.out.println(number);
+			factorial=factorial*i;
+			System.out.println(factorial);
 		}	
 	}
 }
