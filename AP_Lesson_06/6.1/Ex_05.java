@@ -10,7 +10,7 @@ public class Ex_05
 		int mult = kb.nextInt();
 		for(int i = mult; i <= end; i+=mult)
 		{
-			System.out.println(i + " ");
+			System.out.print(i + " ");
 		}	
 	}
 }
