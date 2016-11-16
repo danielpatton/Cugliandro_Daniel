@@ -1,26 +1,33 @@
-import java.util.Scanner;
-public class Ex_07
+public class Ex_08
 {
-	static Scanner kb;
+	static String line1, line2, line3, line4;
+	static int num1, num2, num3, num4;
 	public static void main(String[]args)
 	{
-		kb = new Scanner(System.in);
-		sing();
-		
+		line1 = "Na";
+		num1 = 4;
+		line2 = "Na";
+		num2 = 4;
+		line3 = "Hey";
+		num3 = 3;
+		line4 = "Goodbye!";
+		num4 = 1;
+		sing(line1, num1);
+		System.out.println();
+		sing(line2, num2);
+		System.out.println();
+		sing(line3, num3);
+		System.out.println();
+		sing(line4, num4);
 	}	
-	public static void sing()
-	{
-		System.out.println("Please enter a word: ");
-		String word = kb.next();
-		System.out.println("Enter the number of times this word will be repeated: ");
-		int number = kb.nextInt();
-		for(int i = 0; i=number; i++)
-			{
-					System.out.println(word);
-					
 
-			}	
-		}
-		
+	public static void sing(String one, int two)
+	{
+		for(int i = 0; i < two; i++)
+		{
+			System.out.print(one.substring(0) + " ");
+			
+		}	
 	}
 }
+	
