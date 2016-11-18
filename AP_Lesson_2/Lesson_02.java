@@ -8,7 +8,7 @@ public class Lesson_02
 		int total = n1 * n2;
 		String n = " Daniel Cugliandro";
 		String a = " 4161 Street ";
-		String c = " San Diego ";
+		String c = " San Diego, CA ";
 		int z = 92130;
 		int l = 5;
 		int w = 8;
