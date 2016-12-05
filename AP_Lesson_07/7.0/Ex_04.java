@@ -15,7 +15,8 @@ public class Ex_04
 	{
 		while(sentence.indexOf("a") >= 0)
 		{
-			sentence = sentence.replace("a", "@");
+			sentence = sentence.substring(0, sentence.indexOf("a")) + "@" + sentence.substring(sentence.indexOf("a") + 1);
 		}
+		
 	}
 }
