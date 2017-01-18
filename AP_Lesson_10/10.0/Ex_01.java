@@ -6,7 +6,7 @@ public class Ex_01
 	{
 		Integer [] numbers = {2,6,8,9,10,12,13,15,17,24,55,66,78,77,79};
 		ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(numbers));
-		removePrimes(ArrayList<Integer> nums);
+		removePrimes(nums);
 		System.out.println(nums);
 	}
 	
@@ -22,9 +22,9 @@ public class Ex_01
 		return 0;
 	}
 	
-	public void removePrimes(ArrayList<Integer> nums) 
+	public static void removePrimes(ArrayList<Integer> nums) 
 	{
-		for(int i = 0; i< nums.size(); i++)
+		for(int i = 0; i < nums.size(); i++)
 		{
 			if(gFactor(nums.get(i)) == 0)
 			{
@@ -32,5 +32,5 @@ public class Ex_01
 				i--;
 			}
 		}
-	}//incomplete
+	}
 }
