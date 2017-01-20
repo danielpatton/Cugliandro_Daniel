@@ -15,6 +15,7 @@ public class Ex_02
 
 	public static void doEquation(ArrayList<String> equation)
 	{
+		int i = 0;
 		while(i < equation.size())
 		{
 			if(equation.get(i).equals("*") && equation.get(i).equals("/"))
@@ -30,12 +31,8 @@ public class Ex_02
 				equation.remove(i-1);
 				equation.remove(i);
 			}
-			i++;
-		}
-		
-		while(i < equation.size())
-		{
-			if(equation.get(i).equals("+") && equation.get(i).equals("-"))
+			
+			else if (equation.get(i).equals("+") && equation.get(i).equals("-"))
 			{
 				if(equation.get(i).equals("+"))
 				{
@@ -48,9 +45,11 @@ public class Ex_02
 				equation.remove(i-1);
 				equation.remove(i);
 			}
-			i++;
-			
-		return equation; //not finished
+			else
+			{
+				i++;
+			}
 		}
+		System.out.println(equation); 
 	}
 }
