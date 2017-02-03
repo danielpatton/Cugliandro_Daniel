@@ -11,17 +11,17 @@ public class UserDriver
         System.out.println("Would you like a public avatar? (y or n) ");
         String avatar = kb.next();
        
-        if(avatar == "n")
+        if(avatar.equals("n"))
         {
             UserClass object = new UserClass(firstName, lastName);
             System.out.println(object);
         }
-        else if(avatar == "y")
+        else if(avatar.equals("y"))
         {
             System.out.println("Please enter avatar name: ");
             avatar = kb.next();
-            UserClass object = new UserClass(firstName, lastName, avatar);
-            System.out.println(object);
+            UserClass object2 = new UserClass(firstName, lastName, avatar);
+            System.out.println(object2);
             
         }
         

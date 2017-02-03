@@ -1,7 +1,7 @@
 public class Inventory
 {   
-    private String Manufacturer, Name, Category;
-    private double UPC, Price;
+    private static String Manufacturer, Name, Category;
+    private static double UPC, Price;
     public Inventory ()
     {
        Manufacturer = "";
@@ -13,7 +13,7 @@ public class Inventory
        Name = n;
        UPC = (int)(Math.random() * 1000000000) + 1;
     }
-        public Inventory(String m, String n, String c, double p)
+    public Inventory(String m, String n, String c, double p)
     {
        Manufacturer = m;
        Name = n;
