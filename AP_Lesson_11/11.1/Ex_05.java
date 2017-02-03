@@ -27,7 +27,7 @@ public class Ex_05
            {
                System.out.print(shoot());
            }
-           System.out.print(printClip());
+           printClip();
 		}
        
        System.out.println("Out of Bullets!!!");
