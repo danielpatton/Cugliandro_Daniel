@@ -1,16 +1,15 @@
 import java.util.Scanner;
-public ToyRunner
+public class ToyRunner
+
 {
 	public static void main(String[]args)
     {
-		Scanner kb = new Scanner(System.in);
-		System.out.println("Please enter your action figure: ");
-		String AF = kb.next();
-		System.out.println("Please enter your car: ");
-		String car = kb.next();
-		
-		AFigure object = new AFigure(name, count);
-		Car object = new Car(name, count);
-        System.out.print(object.toString());
+	
+		AFigure object = new AFigure("Name1");
+		Car object2 = new Car("Name2");
+		System.out.println(object);
+		System.out.println(object2);
 	}
+		
+
 }

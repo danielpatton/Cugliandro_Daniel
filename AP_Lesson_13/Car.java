@@ -1,14 +1,16 @@
-public Car extends Toy
+public class Car extends Toy
 {
-	private String name;
-	private double count;
-
-   getType(int x, int y, int w, int h)
-   {
-      this.x = x;
-      this.y = y;
-      this.w = w;
-      this.h = h;
-   }
-	return "Car";
+	public Car()
+	{
+		super();
+	}
+	public Car(String n)
+	{
+		super(n);
+	}
+	
+	public String getType()
+    {
+		return "Car";
+    }
 }
