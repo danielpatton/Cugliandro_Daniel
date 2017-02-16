@@ -1,7 +1,7 @@
 public abstract class Toy
 {
 	private String name;
-	private double count;
+	private int count;
 	public Toy()
 	{
 		this.name = "";
@@ -16,7 +16,7 @@ public abstract class Toy
     {
        this.name = nm;
     }
-	public void setCount (double c)
+	public void setCount (int c)
     {
        this.count = c;
     }
@@ -24,7 +24,7 @@ public abstract class Toy
     {
         return name;
     }
-	public double getCount()
+	public int getCount()
     {
         return count;
     }

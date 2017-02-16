@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 public class ToyStore 
 {
-	private ArrayList<Toy> toyList;
+	private static ArrayList<Toy> toyList;
 	
 	public ToyStore()
 	{
@@ -15,7 +15,7 @@ public class ToyStore
 	{ 	
 		toyList = new ArrayList<>();
 		String[] toys = ts.split(", ");
-		for(int i = 0; i < toys.length; i++)
+		for(int i = 0; i < toys.length; i+=2)
 		{
 			String name = toys[i];
 			String type = toys[i + 1];
@@ -46,7 +46,7 @@ public class ToyStore
 	public String getMostFrequentToy()
 	{
 		String name = "";
-		double max = Integer.MIN_VALUE;
+		int max = Integer.MIN_VALUE;
 		for(Toy yot : toyList)
 		{
 			if(max < yot.getCount())
