@@ -1,4 +1,4 @@
-public class Rectangle
+public class Rectangle implements CutShapes
 {
 	double sideA, sideB;
 	public Rectangle()
@@ -17,5 +17,9 @@ public class Rectangle
 	public double getSideB()
 	{
 		return sideB;
+	}
+	public double getArea()
+	{
+		return sideA = sideB;
 	}
 }
