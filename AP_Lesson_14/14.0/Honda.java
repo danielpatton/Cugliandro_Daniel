@@ -1,20 +1,31 @@
 public class Honda implements Location
 {
+	private double xco, yco;
+	public Honda()
+	{
+		xco = 0;
+		yco = 0;
+	}
+	public Honda(double[] xy)
+	{
+		xco = 0;
+		yco = 0;
+		move(xy[0], xy[1]);
+	}
 	public int getID()
 	{
 		return (int)(Math.random() * 1000000) + 1;
 	}
-	public void move(int x, int y)
+	public void move(double x, double y)
 	{
-		System.out.println("Please enter x coordinates: ");
-		x = kb.next();
-		System.out.println("Please enter y coordinates: ");
-		y = kb.next();
+		xco+=x;
+		yco+=y;
 	}
-	public void getLoc(double[] location)
+	public double[] getLoc()
 	{
-		double[] location = new double[];
-		loc = x + y;
-		return double[] ;
+		double[] location = new double[2];
+		location[0] = xco;
+		location[1] = yco;
+		return location;
 	}
 }

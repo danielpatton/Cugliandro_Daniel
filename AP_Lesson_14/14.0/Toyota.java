@@ -1,22 +1,28 @@
 public class Toyota implements Location
 {
-	private static double[] location = new double[];
-	
+	private double[] location;
+	public Toyota()
+	{
+		location = new double[2];
+	}
+	public Toyota(String xy)
+	{
+		location = new double[2];
+		String[] split = xy.split(" , ");
+		move((Double.parseDouble(split[0])), (Double.parseDouble(split[1])));
+	}
 	public int getID()
 	{
 		return (int)(Math.random() * 1000000) + 1;
 	}
-	public void move(int x, int y)
+	public void move(double x, double y)
 	{
-		System.out.println("Please enter x coordinates: ");
-		x = kb.next();
-		System.out.println("Please enter y coordinates: ");
-		y = kb.next();
+		location[0]+=x;
+		location[1]+=y;
 	}
-	public void getLoc(double[] location)
+	public double[] getLoc()
 	{
-		double[] location = new double[];
-		loc = x + y;
-		return double[] loc;
+		double[] location = xy;
+		return location;
 	}
 }
