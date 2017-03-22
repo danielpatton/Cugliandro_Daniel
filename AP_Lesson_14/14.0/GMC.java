@@ -1,17 +1,16 @@
 import java.util.Scanner;
 public class GMC implements Location
 {
-	Scanner kb = new Scanner(System.in);
-	private double xco, yco;
+	private double locX, locY;
 	public GMC()
 	{
-		xco = 0;
-		yco = 0;
+		locX = 0;
+		locY = 0;
 	}
 	public GMC(double x, double y)
 	{
-		xco = 0;
-		yco = 0;
+		locX = 0;
+		locY = 0;
 		move(x, y);
 	}
 	public int getID()
@@ -20,14 +19,14 @@ public class GMC implements Location
 	}
 	public void move(double x, double y)
 	{
-		xco+=x;
-		yco+=y;
+		locX+=x;
+		locY+=y;
 	}
 	public double[] getLoc()
 	{
 		double[] location = new double[2];
-		location[0] = xco;
-		location[1] = yco;
+		location[0] = locX;
+		location[1] = locY;
 		return location;
 	}
 }

@@ -8,7 +8,7 @@ public class Toyota implements Location
 	public Toyota(String xy)
 	{
 		location = new double[2];
-		String[] split = xy.split(" , ");
+		String[] split = xy.split(", ");
 		move((Double.parseDouble(split[0])), (Double.parseDouble(split[1])));
 	}
 	public int getID()
@@ -22,7 +22,7 @@ public class Toyota implements Location
 	}
 	public double[] getLoc()
 	{
-		double[] location = xy;
+		double[] loc = location;
 		return location;
 	}
 }

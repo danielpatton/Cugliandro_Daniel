@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Satellite implements Location
+public class Satellite
 {
    public static void main(String[]args)
    {
