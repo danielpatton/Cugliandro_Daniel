@@ -1,21 +1,16 @@
-public class Car
+public class Car implements Location
 {
-	private double[] location;
+	double[] location;
 	public final int ID;
 	
 	public Car()
 	{
-		location = new double[2];
+		location = double[2];
 	}
-	public Car()
+	public void move(double x, double y);
+	
+	public double[] getLoc()
 	{
-		location = new double[2];
-		String[] split = xy.split(", ");
-		move((Double.parseDouble(split[0])), (Double.parseDouble(split[1])));
+		return location;
 	}
-	public int getID()
-	{
-		return ID;
-	}
-	public void move(double )
 }
