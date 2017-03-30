@@ -21,7 +21,7 @@ public class Satellite
 
        for (Location l : locate)
        {
-           printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
+           printout += "\nNew Location: " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
        }
 
 

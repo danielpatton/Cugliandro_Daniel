@@ -6,7 +6,9 @@ public class Toyota extends Car
 	}
 	public Toyota(String xy)
 	{
-		super(xy);
+		super();
+		String[] split = xy.split(", ");
+		move((Double.parseDouble(split[0])), (Double.parseDouble(split[1])));
 	}
 	
 }
