@@ -34,10 +34,10 @@ public class Magpie2
 			response = "Why so negative?";
 		}
 
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0)
+		else if ( findKeyword(statement, "mother") >= 0
+				||findKeyword(statement, "father") >= 0
+				||findKeyword(statement, "sister") >= 0
+				||findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
 		}
