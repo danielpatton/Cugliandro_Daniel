@@ -52,6 +52,13 @@ public class Magpie2
 		 * Create addtional code (another else if) that
 		 * responds "He sounds like a pretty dank teacher"
 		 * if you mention "Robinette" in your statement */
+		 else if( findKeyword(statement, "cat") >= 0
+                ||findKeyword(statement, "dog") >= 0
+                ||findKeyword(statement, "fish") >= 0
+                ||findKeyword(statement, "turtle") >= 0)
+        {
+            response = "Tell me more about your pet.";        
+        }
 
 		else
 		{
@@ -68,6 +75,8 @@ public class Magpie2
 		int psn = phrase.indexOf(goal, startPos);
 		while (psn >= 0)
 		{
+			String before = " ";
+			String after = " ";
 			if (psn>0)
 			{
 				before = phrase.substring(psn - 1, psn);
@@ -86,7 +95,6 @@ public class Magpie2
 				psn = phrase.indexOf(goal, psn + 1);
 			}
 		}
-		return -1;
 		
 		/* New String variable phrase = a more searchable version of statement.
 		 	-Use a combination of trim() and toLowerCase() modify statement.
