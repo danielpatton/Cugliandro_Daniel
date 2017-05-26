@@ -29,7 +29,7 @@ public class Magpie2
 		/** To be completed in Exercise_02:
 		 * 	Modify the following code to use the findKeyword
 		 * 	Method (details in "Exercise_02" below. */
-		else if (statement.indexOf("no") >= 0)
+		else if (findKeyword(statement, "no", 0) >= 0)
 		{
 			response = "Why so negative?";
 		}
@@ -71,16 +71,20 @@ public class Magpie2
 		  // Look for a two word (you <something> me)
 		  // pattern
 		  int psn = findKeyword(statement, "you", 0);
-
-
-		  if (psn >= 0
-				&& findKeyword(statement, "me", psn) >= 0)
+		  if (psn >= 0	&& findKeyword(statement, "me", psn) >= 0)
 		  {
 			 response = transformYouMeStatement(statement);
 		  }
+		  
 		  else
 		  {
-			 response = getRandomResponse();
+			psn = findKeyword(statement, "I");
+			if(psn >= 0 && findKeyword(statement, "you", psn) >= 0)
+				response = transformIYouStatement(statement);
+			  else
+			  {
+				 response = getRandomResponse();
+			  }
 		  }
 		}
 		return response;
@@ -108,14 +112,14 @@ public class Magpie2
 	   * /
 	   * return "What would it mean to" + restOfStatement; **/
 	   
-	   statement.trim();
+	   statement = statement.trim();
 	   String lastChar = statement.substring(statement.length()-1);
 	   if (lastChar.equals("."))
 	   {
-			statement = statement.replace(lastChar, "");
+			statement = statement.substring(0, statement.length()-1);
 	   }
 		int psn = findKeyword(statement, "I want to ", 0);
-		String restOfStatement = statement.substring(psn, statement.length() - 1).trim();
+		String restOfStatement = statement.substring(psn + 9).trim();
 		return "What would it mean to " + restOfStatement + "?";
 	}
 
@@ -143,7 +147,7 @@ public class Magpie2
 	   *
 	   * return "What makes you think that I " + restOfStatement + "you?"
 	   * */
-	   statement = statement.trim();
+	   statement = statement.trim().toLowerCase();
 	   String lastChar = statement.substring(statement.length()-1);
 	   if (lastChar.equals("."))
 	   {
@@ -165,7 +169,7 @@ public class Magpie2
 	   }
 	   int psnOfI = findKeyword(statement, "I", 0);
 	   int psnOfYou = findKeyword(statement, "you", psnOfI);
-	   String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
+	   String restOfStatement = statement.substring(psnOfI + 1, psnOfYou);
 	   return "Why do you " + restOfStatement + " me?";
 
 	}
@@ -174,6 +178,7 @@ public class Magpie2
 	private int findKeyword(String statement, String goal, int startPos)
 	{
 		String phrase = statement.trim().toLowerCase();
+		goal = goal.trim().toLowerCase();
 		int psn = phrase.indexOf(goal, startPos);
 		while (psn >= 0)
 		{
@@ -183,9 +188,9 @@ public class Magpie2
 			{
 				before = phrase.substring(psn - 1, psn);
 			}				
-			if (psn + goal.length() <= phrase.length())
+			if (psn + goal.length() < phrase.length())
 			{
-				after = phrase.substring(psn - 1, psn) + goal.length();
+				after = phrase.substring(psn + goal.length(), psn + goal.length() + 1);
 			}
 			if (((before.compareTo("a") < 0) || (before.compareTo("z") > 0))
 					&& ((after.compareTo("a") < 0) || (after.compareTo("z") > 0)))
