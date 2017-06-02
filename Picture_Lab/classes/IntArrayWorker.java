@@ -27,6 +27,21 @@ public class IntArrayWorker
     }
     return total;
   }
+  public int getCount(int integer)
+  {
+	int count  = 0;
+	for (int[] rowArray : matrix)
+	{
+		for (int item : rowArray)
+		{
+			if(item == integer)
+			{
+				count++;
+			}
+		}
+	}
+	return count;
+  }
   
   /**
    * Method to return the total using a nested for-each loop
@@ -78,7 +93,32 @@ public class IntArrayWorker
     System.out.println();
   }
   
+  public int getLargest()
+  {
+	int largest  = 0;
+	for (int[] rowArray : matrix)
+	{
+		for (int item : rowArray)
+		{
+			if(item > largest)
+			{
+				largest = item;
+			}
+		}
+	}
+	return largest;
+  }
   
+  public int getColTotal(int colTotal)
+  {
+	  int total = 0;
+	  for (int[] rowArray : matrix)
+	{
+		total += rowArray[colTotal];
+	}
+	return total;
+	  
+  }
   /** 
    * fill the array with a pattern
    */
