@@ -14,9 +14,9 @@ public class CardTester {
 		Card due = new Card("1", "Spades", 1);
 		Card tre = new Card("10", "Clubs", 10);
 		
-	System.out.println("Is the first card equal to the second card?" + uno.matches(due));
-	System.out.println("Is the first card equal to the third card?" + uno.matches(tre));
-	System.out.println("What is the rank, suit, and point value of the first card?" + uno.toString());
+	System.out.println("Is the first card equal to the second card? " + uno.matches(due));
+	System.out.println("Is the first card equal to the third card? " + uno.matches(tre));
+	System.out.println("What is the rank, suit, and point value of the first card? " + uno.toString());
 	}
 	
 }
